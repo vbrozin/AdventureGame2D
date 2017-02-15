@@ -5,13 +5,15 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour {
 
+    private HeroManager heroManager;
+
     public float moveForce = 365f;			// Amount of force added to move the player left and right.
     public float maxSpeed = 5f;             // The fastest the player can travel in the x axis.
 
     // Use this for initialization
     void Start () {
-		
-	}
+        heroManager = GetComponent<HeroManager>();
+    }
 	
 	// Update is called once per frame
 	void FixedUpdate () {
@@ -40,6 +42,11 @@ public class CharacterController : MonoBehaviour {
 
         // If the input is moving the player right and the player is facing left...
         Flip(move);
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            heroManager.Hit();
+        }
 
     }
 

@@ -69,6 +69,11 @@ public class EnnemieBehaviour : MonoBehaviour {
     {
         Vector2 direction = transform.position - col.transform.position;
         StartCoroutine("Bump",direction);
+
+        if (col.gameObject.layer.Equals(LayerMask.NameToLayer("Weapon")))
+        {
+
+        }
     }
 
     private IEnumerator Bump(Vector2 direction)
