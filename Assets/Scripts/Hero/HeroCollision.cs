@@ -19,7 +19,7 @@ public class HeroCollision {
             EnnemieItf ennemie = col.gameObject.GetComponent<EnnemieItf>();
             if(ennemie != null)
             {
-                heroManager.LooseLife(ennemie.Attack);
+                heroManager.LooseLife(ennemie.GetAttack());
             }
         }
     }

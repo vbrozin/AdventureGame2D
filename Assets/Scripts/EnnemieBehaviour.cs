@@ -68,21 +68,26 @@ public class EnnemieBehaviour : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D col)
     {
         Vector2 direction = transform.position - col.transform.position;
-        StartCoroutine("Bump",direction);
+        StartCoroutine(Bump(direction, 0.5f));
+    }
 
-        if (col.gameObject.layer.Equals(LayerMask.NameToLayer("Weapon")))
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.gameObject.layer.Equals(LayerMask.NameToLayer("Weapon")))
         {
-
+            Vector2 direction = transform.position - col.transform.position;
+            StartCoroutine(Bump(direction,1f));
         }
     }
 
-    private IEnumerator Bump(Vector2 direction)
+    private IEnumerator Bump(Vector2 direction,float force)
     {
         isBumping = true;
-        GetComponent<Rigidbody2D>().velocity = direction.normalized * speed * 0.5f;
+        GetComponent<Rigidbody2D>().velocity = direction.normalized * speed * force;
         yield return new WaitForSeconds(0.3f);
         isBumping = false;
     }
+
 
     private bool seeHero()
     {

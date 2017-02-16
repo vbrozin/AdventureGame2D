@@ -43,7 +43,7 @@ public class CharacterController : MonoBehaviour {
         // If the input is moving the player right and the player is facing left...
         Flip(move);
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))
         {
             heroManager.Hit();
         }

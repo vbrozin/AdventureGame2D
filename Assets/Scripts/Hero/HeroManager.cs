@@ -7,7 +7,7 @@ public class HeroManager : MonoBehaviour {
 
     public GameObject weaponPrefab;
 
-    private GameObject weaponInstance;
+    private WeaponItf weaponInstance;
 
     private int maxLife = 3;
 
@@ -19,7 +19,7 @@ public class HeroManager : MonoBehaviour {
     void Start()
     {
         collisionManager = new HeroCollision(this);
-        weaponInstance = Instantiate(weaponPrefab, transform, false);
+        weaponInstance = Instantiate(weaponPrefab, transform, false).GetComponent<WeaponItf>();
         UILifeManager.Instance.initialize(maxLife);
     }
 
@@ -51,11 +51,10 @@ public class HeroManager : MonoBehaviour {
 
     private void HeroDies()
     {
-        throw new NotImplementedException();
     }
 
     public void Hit()
     {
-        weaponInstance.GetComponent<Animator>().SetTrigger("Hit");
+        weaponInstance.Hit();
     }
 }
