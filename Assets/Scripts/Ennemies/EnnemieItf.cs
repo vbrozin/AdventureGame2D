@@ -4,7 +4,6 @@ using UnityEngine;
 
 public abstract class EnnemieItf : MonoBehaviour
 {
-
     protected int Life { get; set; }
 
     protected int Attack { get; set; }

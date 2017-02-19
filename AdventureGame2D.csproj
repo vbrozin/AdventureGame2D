@@ -76,12 +76,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CharacterController.cs" />
+    <Compile Include="Assets\Scripts\CrateController.cs" />
     <Compile Include="Assets\Scripts\EnnemieBehaviour.cs" />
     <Compile Include="Assets\Scripts\Ennemies\EnnemieItf.cs" />
     <Compile Include="Assets\Scripts\Ennemies\Frog.cs" />
     <Compile Include="Assets\Scripts\Hero\HeroCollision.cs" />
     <Compile Include="Assets\Scripts\Hero\HeroManager.cs" />
-    <Compile Include="Assets\Scripts\UILifeManager.cs" />
+    <Compile Include="Assets\Scripts\Hero\UILifeManager.cs" />
     <Compile Include="Assets\Scripts\Weapon.cs" />
     <Compile Include="Assets\Scripts\WeaponItf.cs" />
   </ItemGroup>
