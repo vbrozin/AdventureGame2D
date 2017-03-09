@@ -83,6 +83,9 @@
     <Compile Include="Assets\Scripts\Hero\HeroCollision.cs" />
     <Compile Include="Assets\Scripts\Hero\HeroManager.cs" />
     <Compile Include="Assets\Scripts\Hero\UILifeManager.cs" />
+    <Compile Include="Assets\Scripts\Interaction.cs" />
+    <Compile Include="Assets\Scripts\InteractionItf.cs" />
+    <Compile Include="Assets\Scripts\SocleController.cs" />
     <Compile Include="Assets\Scripts\Weapon.cs" />
     <Compile Include="Assets\Scripts\WeaponItf.cs" />
   </ItemGroup>
